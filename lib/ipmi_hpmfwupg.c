@@ -1140,7 +1140,8 @@ HpmFwupgActionUploadFirmware(struct HpmfwupgComponentBitMask components,
 	pData = pDataInitial;
 
 	/* Find max buffer length according the connection parameters */
-	max_rq_size = ipmi_intf_get_max_request_data_size(intf);
+	//max_rq_size = ipmi_intf_get_max_request_data_size(intf);
+	max_rq_size = 17;
 
 	/* validate lower bound of max request size */
 	if (max_rq_size <= sizeof(struct HpmfwupgUploadFirmwareBlockReq)) {
